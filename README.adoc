@@ -1,0 +1,11 @@
+= Efficiency of various programming languages on a simple numerical task
+
+The numerical task being implemented here is approximating square roots via the so-called https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method["Babylonian method"]. To increase the computational effort
+
+- the initial value for the square root is chosen sub-optimally,
+- the maximum permissible error is chosen to be very small,
+- the square root of a large number of values is calculated.
+
+All compilation and execution is done in Docker containers to eliminate any local installation requirements (apart from a Docker daemon).
+
+The output, including overall (wallclock) execution time on my laptop, is given in file `output` for each language.
