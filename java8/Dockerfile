@@ -1,4 +1,6 @@
 FROM openjdk:8 AS builder
+# show compiler version
+RUN javac -version
 # compile and package app
 WORKDIR /app
 COPY . .

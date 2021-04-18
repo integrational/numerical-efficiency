@@ -8,6 +8,9 @@ The numerical task implemented here is approximating square roots via the so-cal
 
 The implementation for each programming language tries to follow common idioms for that language - as far as they are visible in and applicable to a simple numerical program with very little modularization.
 
-All compilation and execution is done in Docker containers to eliminate any local installation requirements (apart from a Docker daemon).
+All building, packaging, and execution is done in Docker containers to eliminate any local installation requirements (apart from a Docker daemon).
 
-The output, including overall (wallclock) execution time on my laptop, is given in file `output` for each language.
+For each language,
+
+- the output of building the execution container (which is itself done in a (build) container) is given in file `output_build`,
+- the output of running the execution container, including overall (wallclock) execution time on my laptop, is given in file `output_run`.
