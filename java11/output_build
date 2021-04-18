@@ -1,0 +1,73 @@
+#1 [internal] load build definition from Dockerfile
+#1 sha256:701006c0723a51e8e5ef88d5cf8e34b6ee06f37a35d3719770772382181c48d3
+#1 transferring dockerfile: 316B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:03a9a1860870a54d032c43e849ee02124be034e8560507ab6a3edb310ea35fe1
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/openjdk:11
+#3 sha256:87dc9b3cee4adf6787fd792601b37fcaad0ed6bd5314a02f15c26446f91634ad
+#3 ...
+
+#4 [auth] library/openjdk:pull token for registry-1.docker.io
+#4 sha256:fe3041c8db2cf208899d3864257f8694316afab21d0b27fcb1410c4af64cc9ad
+#4 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/openjdk:11
+#3 sha256:87dc9b3cee4adf6787fd792601b37fcaad0ed6bd5314a02f15c26446f91634ad
+#3 DONE 2.1s
+
+#3 [internal] load metadata for docker.io/library/openjdk:11
+#3 sha256:87dc9b3cee4adf6787fd792601b37fcaad0ed6bd5314a02f15c26446f91634ad
+#3 DONE 2.1s
+
+#5 [stage-1 1/3] FROM docker.io/library/openjdk:11@sha256:ee092329aa95ff6117322d0cdd9f2f153aa1b04e21b9bb87f529f0c36cedd101
+#5 sha256:0a4c87a88b38c52e9e45d9179a8d2a0b54a490e871cb7eaa2ad60b4e426af56b
+#5 CACHED
+
+#9 [internal] load build context
+#9 sha256:b3e465a69893ce906749f59ee217cdb6453e10a3e1f68ab2adba8bfce4f7a081
+#9 transferring context: 4.26kB done
+#9 DONE 0.0s
+
+#7 [builder 2/6] RUN javac -version
+#7 sha256:406d383b58c323511d592883f0f533a55fc179adbc935c6d0479e58192595406
+#7 0.746 javac 11.0.10
+#7 DONE 0.8s
+
+#8 [builder 3/6] WORKDIR /app
+#8 sha256:5c69793cb29e7a4f1b0fe0499fac46f275444481283868a91fdbdd51606ac5c9
+#8 DONE 0.0s
+
+#10 [builder 4/6] COPY . .
+#10 sha256:fc4305497c946108ddc26be0f66e185354b885c6e0d94123a07f91b45077deea
+#10 DONE 0.1s
+
+#11 [builder 5/6] RUN javac *.java
+#11 sha256:7ed2389b84fb0210e56662b182b16407baf292836c4cdbc38ce44e9019602230
+#11 DONE 1.5s
+
+#12 [builder 6/6] RUN jar cvfe app.jar SquareRoot *.class
+#12 sha256:815babb985cea5f9b8d6e6504c37449bda533448f961d67312ef23944691f34e
+#12 0.499 added manifest
+#12 0.532 adding: SquareRoot$Result.class(in = 391) (out= 291)(deflated 25%)
+#12 0.533 adding: SquareRoot.class(in = 2445) (out= 1385)(deflated 43%)
+#12 DONE 0.6s
+
+#6 [stage-1 2/3] WORKDIR /app
+#6 sha256:2c4500d5b696a9d60d61ac5c6b9808dec5b76ba34c629e1dda0f8e6469b75402
+#6 CACHED
+
+#13 [stage-1 3/3] COPY --from=builder /app/app.jar .
+#13 sha256:7c832d3654e5a3497f11df087b0f929413b9cd9cb367a8247cb93bd033a27838
+#13 DONE 0.0s
+
+#14 exporting to image
+#14 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#14 exporting layers 0.0s done
+#14 writing image sha256:7940d1c70bef02d8ab14be683fc1a4f9a1ab00afe93c68be60d9bc0cf0d06acf done
+#14 naming to docker.io/library/square-root-java11 done
+#14 DONE 0.0s

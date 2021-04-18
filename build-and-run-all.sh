@@ -6,3 +6,5 @@ for d in */ ; do
     ./build-and-run.sh
     popd > /dev/null
 done
+
+./combine-execution-times.sh

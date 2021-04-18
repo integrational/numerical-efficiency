@@ -1,0 +1,75 @@
+#1 [internal] load build definition from Dockerfile
+#1 sha256:fce4201013f1532098a5ad2bafa6e2f6e93581d6b2955638ae39699ed194cd71
+#1 transferring dockerfile: 1.02kB done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:a1ca9ecf698017668ca5933c919a1e0a18c87d8f2e0bb04547068cd05e6e7b12
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/openjdk:8
+#3 sha256:c1006613b124ab347fbb29ae49e2ab62add271baf34bdfe7a7a4c383ac159b76
+#3 DONE 0.9s
+
+#4 [builder 1/9] FROM docker.io/library/openjdk:8@sha256:8a64e423901d81b7b410ca5b3851e4bfb4d2995371d548055dcef13607004a8a
+#4 sha256:333a651ee283ca5cad725124814e42def4af95b8af87f318c73198eaddc097c2
+#4 DONE 0.0s
+
+#12 [internal] load build context
+#12 sha256:f5fefc71e9f6e5a55c6c88bc28970dcac6b991f422bdbd22edb72ceb4015c6a6
+#12 transferring context: 3.81kB done
+#12 DONE 0.0s
+
+#6 [builder 2/9] RUN apt update && apt upgrade -y && apt install curl unzip -y
+#6 sha256:b63a557cbac59d9482f6910f743fe5bac7ca8f4d35fbde90b00918f1e8b0a9a5
+#6 CACHED
+
+#8 [builder 4/9] RUN export LOC="$(curl -IBs https://github.com/JetBrains/kotlin/releases/latest | sed 's|[^[:print:]]||g' | grep -i 'location:')"  && export VER=$(echo $LOC | sed 's|.*tag/v||g')                                                                                   && echo "Downloading Kotlin compiler version $VER"                                                                                && curl -o kc.zip -L "https://github.com/JetBrains/kotlin/releases/download/v$VER/kotlin-compiler-$VER.zip"
+#8 sha256:62d0463cee4b0e24f4c2646521ade94669b60b17f852c1fa059a41406e1ed516
+#8 CACHED
+
+#10 [builder 6/9] RUN kotlinc -version
+#10 sha256:577a83a76243d7c69e3e6c06b9644b76fff5ef377261201dd83424dd401e6c02
+#10 CACHED
+
+#7 [builder 3/9] WORKDIR /opt
+#7 sha256:c95ee720870c77c1f3c59ebab75494ad34b74d24bab59f9f1eb4e2481e77ee12
+#7 CACHED
+
+#9 [builder 5/9] RUN unzip kc.zip # unzips to kotlinc directory
+#9 sha256:3db4ae52d4f3d3b624d71d5d3ea2ea627c57d6296a9827158e09ef9020c40ff2
+#9 CACHED
+
+#11 [builder 7/9] WORKDIR /app
+#11 sha256:dc74c9c325f1746b30cd54b6e205a1e644d3930bdd4d52a6ecf836d601f9fae8
+#11 CACHED
+
+#13 [builder 8/9] COPY . .
+#13 sha256:6631d70927731eae10fc7bc01aa0abb7bc0c446750ecf57fcef888fea9fa18d3
+#13 DONE 0.1s
+
+#14 [builder 9/9] RUN kotlinc -d app.jar -include-runtime *.kt
+#14 sha256:d64aa35b424854b727ca0e182060d2ee82f0ed6d4df66bd0d05fccfc9e43fc83
+#14 7.930 SquareRoot.kt:69:9: warning: expected performance impact from inlining is insignificant. Inlining works best for functions with parameters of functional types
+#14 7.930 private inline fun error(s: Double, x: Double) = (s - x*x)/(2*x)
+#14 7.930         ^
+#14 7.930 SquareRoot.kt:71:9: warning: expected performance impact from inlining is insignificant. Inlining works best for functions with parameters of functional types
+#14 7.930 private inline fun improve(x: Double, e: Double) = x + e
+#14 7.930         ^
+#14 DONE 8.0s
+
+#5 [stage-1 2/3] WORKDIR /app
+#5 sha256:07fd5824d8cae2ab29f156c8e104c6df7e469b73d6a704ee2e5b3b391d3925b1
+#5 CACHED
+
+#15 [stage-1 3/3] COPY --from=builder /app/app.jar .
+#15 sha256:8f7a0f5bab8cc4a97bf1fa7cbf7b25fadb4ecc42635cb51f7f667292a64569be
+#15 CACHED
+
+#16 exporting to image
+#16 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#16 exporting layers done
+#16 writing image sha256:ddc4b8cf98c966b724ebe8171dd95bef5dc92592e9f64b6fe5fe5446da84e87c done
+#16 naming to docker.io/library/square-root-kotlin done
+#16 DONE 0.0s

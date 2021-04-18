@@ -1,0 +1,4 @@
+go:Time/s: 121
+java11:Time/s: 104
+java8:Time/s: 90
+kotlin:Time/s: 86

@@ -14,3 +14,5 @@ For each language,
 
 - the output of building the execution container (which is itself done in a (build) container) is given in file `output_build`,
 - the output of running the execution container, including overall (wallclock) execution time on my laptop, is given in file `output_run`.
+
+The execution times from all languages are sometimes combined into file link:combined_execution_times[].
