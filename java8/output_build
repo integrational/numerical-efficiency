@@ -1,61 +1,85 @@
 #1 [internal] load build definition from Dockerfile
-#1 sha256:e36ecff079e27dd4306e10708949517f052058349eed899f8df2070d3f1df7b6
+#1 sha256:f37b3c35163c035922070e9b3e37560662d0ae034aacdfaf03577aeaa6362f67
 #1 transferring dockerfile: 314B done
 #1 DONE 0.0s
 
 #2 [internal] load .dockerignore
-#2 sha256:54511949f8c5baf1b57a8c9eb2b8192737d8f9000fb0980dffea54da05a8477c
+#2 sha256:824bac5f52c16264ca44836f3f07267cfded3b99c78ff8d5528543e3b7cdccd6
 #2 transferring context: 2B done
 #2 DONE 0.0s
 
 #3 [internal] load metadata for docker.io/library/openjdk:8
 #3 sha256:c1006613b124ab347fbb29ae49e2ab62add271baf34bdfe7a7a4c383ac159b76
-#3 DONE 0.8s
-
-#4 [builder 1/6] FROM docker.io/library/openjdk:8@sha256:8a64e423901d81b7b410ca5b3851e4bfb4d2995371d548055dcef13607004a8a
-#4 sha256:333a651ee283ca5cad725124814e42def4af95b8af87f318c73198eaddc097c2
-#4 CACHED
+#3 DONE 1.7s
 
 #8 [internal] load build context
-#8 sha256:2059de4c0bc25438c46c244ed5ee4cf9f915c5bdffde26f68bec0a12cd01b8e0
-#8 transferring context: 3.98kB done
+#8 sha256:4befa6e6de2a0ba622949d34e238f5d7a950b966f8404c39c4d50a65a38856de
+#8 transferring context: 5.28kB done
 #8 DONE 0.0s
 
+#4 [builder 1/6] FROM docker.io/library/openjdk:8@sha256:9c973bec7c011abcd4c64c5d8601073d26c9d6dd17ca58ea0df5cda98f0e5b05
+#4 sha256:88ca35e7000181bb1dfab4a957e6f86b7ad171f51463858976f98a02ec8da018
+#4 resolve docker.io/library/openjdk:8@sha256:9c973bec7c011abcd4c64c5d8601073d26c9d6dd17ca58ea0df5cda98f0e5b05 done
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 0B / 105.94MB 0.2s
+#4 sha256:e35928794b16a9ae525cb294eadb94d1056f7ee4b0b2b204720233cda9d7ca7b 1.79kB / 1.79kB done
+#4 sha256:48ff6191b3690194799579907f169ee28929cb4f04b391957232b69b3a139abb 7.83kB / 7.83kB done
+#4 sha256:9c973bec7c011abcd4c64c5d8601073d26c9d6dd17ca58ea0df5cda98f0e5b05 796B / 796B done
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 6.29MB / 105.94MB 3.7s
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 12.58MB / 105.94MB 6.5s
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 18.87MB / 105.94MB 8.2s
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 25.17MB / 105.94MB 9.5s
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 31.46MB / 105.94MB 10.7s
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 37.75MB / 105.94MB 12.5s
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 44.04MB / 105.94MB 13.8s
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 50.33MB / 105.94MB 15.5s
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 56.62MB / 105.94MB 17.2s
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 62.91MB / 105.94MB 18.3s
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 69.21MB / 105.94MB 19.0s
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 76.55MB / 105.94MB 19.9s
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 82.84MB / 105.94MB 20.7s
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 89.13MB / 105.94MB 21.5s
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 95.42MB / 105.94MB 22.2s
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 102.76MB / 105.94MB 23.1s
+#4 sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 105.94MB / 105.94MB 23.6s done
+#4 extracting sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757
+#4 extracting sha256:646a47c88e4331d1da42c78785cbfd1cf6292a4ebaa7f5376695c39efbb4b757 3.3s done
+#4 DONE 27.1s
+
+#5 [stage-1 2/3] WORKDIR /app
+#5 sha256:de1b8931ae222607f608cc2136b0ec5fd7dfe2935381e749884ccf1f9848c46d
+#5 DONE 0.3s
+
 #6 [builder 2/6] RUN javac -version
-#6 sha256:d7214c387f700f533b82b927059097d86fabaa37aba10c3278f5ee2cd487930d
-#6 0.655 javac 1.8.0_282
-#6 DONE 0.7s
+#6 sha256:fd4c61d8263409b6ea7d96610c9a6d4589f604f820c56bd2eeef236b12b42db7
+#6 0.784 javac 1.8.0_292
+#6 DONE 0.8s
 
 #7 [builder 3/6] WORKDIR /app
-#7 sha256:183176d1103c4d4b47acd16df2d0e06a039399b0683866d8a354267663707c04
+#7 sha256:de00f2388147c50d0ee548877feaf00075c7f4cadfefb0d1b5220dcb50637a7b
 #7 DONE 0.0s
 
 #9 [builder 4/6] COPY . .
-#9 sha256:532f3373aaed2b0982595bcfa12404642adf7767372c2eb34373bae281afcee5
-#9 DONE 0.1s
+#9 sha256:e639affa88196849400d83ad808c9d7f5ddd683de03fe9b964a9174e00b3875d
+#9 DONE 0.0s
 
 #10 [builder 5/6] RUN javac *.java
-#10 sha256:feb0998f19685f70a1c2c5a842b7949eb2300b22876d3fb232bc9ba8fdd966d6
-#10 DONE 1.4s
+#10 sha256:314dfac233b395e866e6cbd2299c14c070d6235c62373a732b854828bc6488f1
+#10 DONE 1.3s
 
 #11 [builder 6/6] RUN jar cvfe app.jar SquareRoot *.class
-#11 sha256:833bd89a3d324227ae213fb55ae598eb5d49ec1103891184d5c0ea7789518ebd
-#11 0.452 added manifest
-#11 0.473 adding: SquareRoot$Result.class(in = 372) (out= 276)(deflated 25%)
-#11 0.474 adding: SquareRoot.class(in = 2321) (out= 1326)(deflated 42%)
-#11 DONE 0.5s
-
-#5 [stage-1 2/3] WORKDIR /app
-#5 sha256:07fd5824d8cae2ab29f156c8e104c6df7e469b73d6a704ee2e5b3b391d3925b1
-#5 CACHED
+#11 sha256:dfb81eaf1b77b6b35bf28fd2bc30a8d0650473c6f21728a6e36fdb5ecb350549
+#11 0.525 added manifest
+#11 0.551 adding: SquareRoot$Result.class(in = 372) (out= 276)(deflated 25%)
+#11 0.551 adding: SquareRoot.class(in = 2321) (out= 1326)(deflated 42%)
+#11 DONE 0.6s
 
 #12 [stage-1 3/3] COPY --from=builder /app/app.jar .
-#12 sha256:60da4b0e86b581e49dda56c0aba210babacbdba0ee85f49a43d161fb87d7c7f6
+#12 sha256:33227d6a70a8d877d271c4bc5fa765f0cad66568ead80e0c9f324f3b1cc6ce2b
 #12 DONE 0.1s
 
 #13 exporting to image
 #13 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
 #13 exporting layers 0.0s done
-#13 writing image sha256:c87d749562491b5bd3ec9faba0834c00bc08cd4885b256993c753c45a857cdcd done
+#13 writing image sha256:f3b3f72b4764670dc35e64ca53e6ad0adc0de0048e12329f349568f4825a82fb done
 #13 naming to docker.io/library/square-root-java8 done
 #13 DONE 0.0s

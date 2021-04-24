@@ -1,4 +1,5 @@
-go:Time/s: 121
+crystal:Time/s: 25
+go:Time/s: 123
 java11:Time/s: 104
-java8:Time/s: 90
+java8:Time/s: 91
 kotlin:Time/s: 86
