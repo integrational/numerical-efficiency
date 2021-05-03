@@ -6,7 +6,7 @@ WORKDIR /app
 COPY . .
 RUN crystal build -o app *.cr --release --static
 
-FROM alpine:latest
+FROM scratch
 WORKDIR /app
 COPY --from=builder /app/app .
 CMD ["./app"]

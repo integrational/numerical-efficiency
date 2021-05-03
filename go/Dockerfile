@@ -7,7 +7,7 @@ COPY squareroot .
 RUN go mod tidy
 RUN go build -o app
 
-FROM debian:stable-slim
+FROM scratch
 WORKDIR /app
 COPY --from=builder /app/app .
 CMD ["./app"]
