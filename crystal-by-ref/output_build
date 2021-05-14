@@ -1,10 +1,10 @@
 #1 [internal] load build definition from Dockerfile
-#1 sha256:dee9c2995ae68cd2ff22e1134987ce885aa6bbc117b1c0a013341addb3db5b0e
-#1 transferring dockerfile: 86B done
+#1 sha256:0c7965c578a321bf44f3ceb71684fef6227773ed4669f12fc1bde382423c20a9
+#1 transferring dockerfile: 356B done
 #1 DONE 0.0s
 
 #2 [internal] load .dockerignore
-#2 sha256:1f35378d361f0d1b3bfe948c0431c3dc0413e789b89d84194888e2354d25cc27
+#2 sha256:8b23b425181bb99cfd2b337bc2dbc94f4c8142882ecdb43d79de23da9d691aa6
 #2 transferring context: 2B done
 #2 DONE 0.0s
 
@@ -13,12 +13,12 @@
 #3 ...
 
 #4 [auth] crystallang/crystal:pull token for registry-1.docker.io
-#4 sha256:0169346ed75495bf5bd70c4e70fde49678deb4b8d912c24d35db9e8750dd7bb1
+#4 sha256:37c88ac61ea6557a8b02a06ee57ffd731361f711578256ce2527c8686b8ff413
 #4 DONE 0.0s
 
 #3 [internal] load metadata for docker.io/crystallang/crystal:latest-alpine
 #3 sha256:a6f11eb7466cbe0430281362036f7d3d23c4e21abeceda46ace442a998260b66
-#3 DONE 2.0s
+#3 DONE 1.8s
 
 #6 [builder 1/5] FROM docker.io/crystallang/crystal:latest-alpine@sha256:c9b59f80f6b3821596f45494cd56c3b08048067e18ff0b12c26888830fe167d6
 #6 sha256:3d6617ec30a2d56231c811af804c7e5ae2c80b5f791bcc1bab74ada0274190e7
@@ -29,8 +29,8 @@
 #5 DONE 0.0s
 
 #9 [internal] load build context
-#9 sha256:d4b6140181785457b4b4b660ce0de08e7901b6bb7468432f7120c866980ce01a
-#9 transferring context: 5.21kB done
+#9 sha256:c83a7a7e08d7010b18fa8a4b6d5462eb7378b5c590314df7be94064afa36fc0e
+#9 transferring context: 5.03kB done
 #9 DONE 0.0s
 
 #7 [builder 2/5] RUN crystal version
@@ -42,15 +42,15 @@
 #8 CACHED
 
 #10 [builder 4/5] COPY . .
-#10 sha256:281a7ba40e05df995b46e4cde1e97cf27b960d5277049fba59c57017daf4a72a
+#10 sha256:b3c5d6e2d8687a94c8ecd6e23ef36d37daa3e0463564d72cda9c79d2094ec603
 #10 DONE 0.0s
 
 #11 [builder 5/5] RUN crystal build -o app *.cr --release --static
-#11 sha256:365b5580d2dde284f95302786a3a5ae69636c393f431c0c7f718a853b4f0254c
+#11 sha256:f5346a523a1853655f1e9f6d48e3e08cbc58b477d210043c4eb7734541e7a63c
 #11 DONE 11.9s
 
 #12 [stage-1 2/2] COPY --from=builder /app/app .
-#12 sha256:14ec64b89ba30a915a377bce58c77bb861e4faa5aedd22ea5b79612f078a76c2
+#12 sha256:88618ba46a91cd15ce63ba06b6ee572ce62b0c4a2e64c89a7017780980cb8c8e
 #12 CACHED
 
 #13 exporting to image
