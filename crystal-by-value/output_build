@@ -1,0 +1,55 @@
+#1 [internal] load build definition from Dockerfile
+#1 sha256:b2f612c9e4535be1aff076c6da99edf4a4a5f1ea681f6882194712ab0a2d4353
+#1 transferring dockerfile: 356B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:c1d0dd7cd2f5c16620ad8c79164111e71039f05021c6094c9e9a9372214d8219
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/crystallang/crystal:latest-alpine
+#3 sha256:a6f11eb7466cbe0430281362036f7d3d23c4e21abeceda46ace442a998260b66
+#3 DONE 0.8s
+
+#4 [stage-1 1/2] WORKDIR /app
+#4 sha256:3a096bdcda072493d56e82d073cea343f6fc1fc2e36e272fd671a9964b829e72
+#4 DONE 0.0s
+
+#5 [builder 1/5] FROM docker.io/crystallang/crystal:latest-alpine@sha256:c9b59f80f6b3821596f45494cd56c3b08048067e18ff0b12c26888830fe167d6
+#5 sha256:3d6617ec30a2d56231c811af804c7e5ae2c80b5f791bcc1bab74ada0274190e7
+#5 DONE 0.0s
+
+#8 [internal] load build context
+#8 sha256:d3cec27885ef580667b1f495067fdd43a7d5e5b75b5971b6bf2f49f00d5830e7
+#8 transferring context: 4.23kB done
+#8 DONE 0.0s
+
+#6 [builder 2/5] RUN crystal version
+#6 sha256:51136f2503ae627d408fabc59d28a1cfba9243224a452984142db13e66a7d687
+#6 CACHED
+
+#7 [builder 3/5] WORKDIR /app
+#7 sha256:54d6042e0365da1fd6b059b00a8b6467522524ea0f67f4fd111367506c979db9
+#7 CACHED
+
+#9 [builder 4/5] COPY . .
+#9 sha256:8171e8c41c4efe2a7f8f518ee82c7c8dacd5b7d9cbbef887291298d468124dba
+#9 DONE 0.0s
+
+#10 [builder 5/5] RUN crystal build -o app *.cr --release --static
+#10 sha256:aa54e6257075e9c2b94e0fd824c8205dc752dbc3f9c4433c3dfd9d49e7d28ca6
+#10 DONE 11.8s
+
+#11 [stage-1 2/2] COPY --from=builder /app/app .
+#11 sha256:ba50b8db7fb319f75d71d6ccbb1dcddbf33c1206d3c7ddb2d3e630739836bd8c
+#11 CACHED
+
+#12 exporting to image
+#12 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#12 exporting layers done
+#12 writing image sha256:f2c9e77062ac36d040107bcc8ecb4e6d6d8cdc3499724b83b7a89ea60dc9419d done
+#12 naming to docker.io/library/square-root-crystal-by-value done
+#12 DONE 0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them

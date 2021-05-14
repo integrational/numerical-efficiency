@@ -1,0 +1,87 @@
+package main
+
+import (
+	"fmt"
+	"math"
+	"time"
+)
+
+func main() {
+	t0 := time.Now()
+
+	reps := 100 * 100 * 100 * 100
+	step := reps / 10
+	eMax := 1.0e-10
+	allSqrts(reps, step, eMax)
+
+	t1 := time.Now()
+	dt := t1.Sub(t0).Seconds()
+	fmt.Println("Time/s:", int(dt))
+}
+
+func allSqrts(reps, step int, eMax float64) {
+	dev := Result{0, 0.0, 0.0}
+	for rep := 1; rep <= reps; rep++ {
+		s := math.Pow(math.Pow(math.Pi, math.Pi), math.Pi) + math.Pi*float64(rep)
+
+		r1 := sqrtByIteration(s, eMax)
+		r2 := sqrtByRecursion(s, eMax)
+
+		dev = Result{dev.n + int(math.Abs(float64(r1.n-r2.n))), dev.x + math.Abs(r1.x-r2.x), dev.e + math.Abs(r1.e-r2.e)}
+
+		if rep%step == 0 {
+			fmt.Println(r1.n, ":", math.Sqrt(s), "=", r1.x, "+/-", r1.e)
+			fmt.Println(r2.n, ":", math.Sqrt(s), "=", r2.x, "+/-", r2.e)
+		}
+	}
+	fmt.Println("Deviation:", dev.n, ":", dev.x, ",", dev.e)
+}
+
+func sqrtByIteration(s, eMax float64) Result {
+	i := initial(s, eMax)
+	n := i.n
+	x := i.x
+	e := i.e
+	for math.Abs(e) > eMax {
+		n++
+		x = improve(x, e)
+		e = error(s, x)
+	}
+	return Result{n, x, math.Abs(e)}
+}
+
+func sqrtByRecursion(s, eMax float64) Result {
+	r := sqrtByRecursionInternal(s, eMax, initial(s, eMax))
+	return Result{r.n, r.x, math.Abs(r.e)}
+}
+
+func sqrtByRecursionInternal(s, eMax float64, r Result) Result {
+	if math.Abs(r.e) <= eMax {
+		return r
+	} else {
+		x := improve(r.x, r.e)
+		e := error(s, x)
+		return sqrtByRecursionInternal(s, eMax, Result{r.n + 1, x, e})
+	}
+}
+
+func initial(s, eMax float64) Result {
+	return Result{
+		0,
+		eMax,           // terrible choice
+		error(s, eMax), // for x = eMax
+	}
+}
+
+func error(s, x float64) float64 {
+	return (s - x*x) / (2 * x)
+}
+
+func improve(x, e float64) float64 {
+	return x + e
+}
+
+type Result struct {
+	n    int
+	x, e float64
+}
