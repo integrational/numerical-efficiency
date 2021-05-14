@@ -1,10 +1,10 @@
 #1 [internal] load build definition from Dockerfile
-#1 sha256:0b45b3795b1f532eb67ee7a26b53e62bf3dc8c66a244aa6203505e94376942cd
+#1 sha256:0808389e76f4d45f4d7424e0134c6fb08969912a398ad232f76a9eaf6283d2dd
 #1 transferring dockerfile: 327B done
 #1 DONE 0.0s
 
 #2 [internal] load .dockerignore
-#2 sha256:111f19519ffd4bea3696844706eaefc9a201495f5b5b25fb5f3d9ad9e6c37e3b
+#2 sha256:3b4525af9576c2462aa0d10087fb3c86b5e0013bddf660248252939643c4f530
 #2 transferring context: 2B done
 #2 DONE 0.0s
 
@@ -13,12 +13,12 @@
 #3 ...
 
 #4 [auth] library/golang:pull token for registry-1.docker.io
-#4 sha256:d33c1b78e598c27b0e7f2ced8a74ec336d18a9d35a42a453b37e5d4fc891ee90
+#4 sha256:47bff2007165f73d4626c30094834dc042b81d5d23fc537903857fdab7fc02b6
 #4 DONE 0.0s
 
 #3 [internal] load metadata for docker.io/library/golang:latest
 #3 sha256:6e8cab0150bce7a4c9106ddf2eb7a3082380f89523409028bd8813a908958151
-#3 DONE 1.4s
+#3 DONE 2.1s
 
 #6 [builder 1/6] FROM docker.io/library/golang:latest@sha256:6f0b0a314b158ff6caf8f12d7f6f3a966500ec6afb533e986eca7375e2f7560f
 #6 sha256:36d697989ccb793de876fa5e7dd98d29233de8986df30450816593c9631e1b8e
@@ -29,8 +29,8 @@
 #5 DONE 0.0s
 
 #9 [internal] load build context
-#9 sha256:661453ec6e75c687b46c37c91fb14efe6cf79f07953b434e202c936a5f2599a5
-#9 transferring context: 2.02kB done
+#9 sha256:122f3f4329fe82c654c21a30ef34b2d06725c7c2653f7b4c66a861e63f42f8ba
+#9 transferring context: 2.66kB done
 #9 DONE 0.0s
 
 #7 [builder 2/6] RUN go version
@@ -42,26 +42,29 @@
 #8 CACHED
 
 #10 [builder 4/6] COPY squareroot .
-#10 sha256:37b30c595a31e1481e1917faba387daac9a3e4f979759c8b8ad38bd5a64c87b0
+#10 sha256:7d5cf02a4352ec35d0dc5a08c36e1f12f031fbd18a67d34046b7e798f83b9d8a
 #10 DONE 0.0s
 
 #11 [builder 5/6] RUN go mod tidy
-#11 sha256:ca8686d1b19765d99d0f9788093dcad9bff6f34070e6e89a5bd6ac04ad86ba71
-#11 DONE 0.3s
+#11 sha256:302d292c891161358e187ca89f74ffa6b5e7ded2fd1c40e7d9cd42c8042fb606
+#11 DONE 0.4s
 
 #12 [builder 6/6] RUN go build -o app
-#12 sha256:a66e18eada47d576c54a35aa9e266bbb9d71f3b5bd0c8104cd4a91ea3600ca54
-#12 DONE 0.6s
+#12 sha256:70d828864617831615d8939c876869c84645b8e49548eca83d85316454d4a9bd
+#12 DONE 0.7s
+
+#5 [stage-1 1/2] WORKDIR /app
+#5 sha256:3a096bdcda072493d56e82d073cea343f6fc1fc2e36e272fd671a9964b829e72
+#5 CACHED
 
 #13 [stage-1 2/2] COPY --from=builder /app/app .
-#13 sha256:208340d7cc2679dc335a8b14b1385ae6220c3ab686e811fff74898a3a8e6c335
-#13 CACHED
+#13 sha256:4fe24dd10d5306bc59344233a1348bf91a326e888c1bd5ed45b516bb363d5814
+#13 DONE 0.0s
 
 #14 exporting to image
 #14 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
-#14 exporting layers
-#14 exporting layers done
-#14 writing image sha256:6db052f35cbc9f8dcbd7f3c384a7b574012220618a0674ba551154ef874a74e1 done
+#14 exporting layers 0.0s done
+#14 writing image sha256:13fb5510d5fd50f2bc2171e46d60ee8c97d4fbec89a61e7aae242e1fd27e1443 done
 #14 naming to docker.io/library/square-root-go-by-ref done
 #14 DONE 0.0s
 

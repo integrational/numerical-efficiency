@@ -18,4 +18,4 @@ RUN kotlinc -d app.jar -include-runtime *.kt
 FROM openjdk:8
 WORKDIR /app
 COPY --from=builder /app/app.jar .
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-ea", "-jar", "app.jar"]

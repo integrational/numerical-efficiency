@@ -18,6 +18,9 @@ def all_sqrts(reps : Int32, step : Int32, e_max : Float64)
     r1 = sqrt_by_iteration s, e_max
     r2 = sqrt_by_recursion s, e_max
 
+    assert_correctness r1.x, s, e_max
+		assert_correctness r2.x, s, e_max
+
     dev = Result.new dev.n + (r1.n - r2.n).abs, dev.x + (r1.x - r2.x).abs, dev.e + (r1.e - r2.e).abs
 
     if rep % step == 0
@@ -26,7 +29,19 @@ def all_sqrts(reps : Int32, step : Int32, e_max : Float64)
     end
     rep += 1
   end
-  puts "Deviation: #{dev.n}: #{dev.x}, #{dev.e}"
+  puts "Accumulated Deviations: #{dev.n}: #{dev.x}, #{dev.e}"
+  assert_accum_devs dev, e_max
+end
+
+def assert_correctness(x : Float64, s : Float64, e_max : Float64)
+	c = Math.sqrt(s)
+	e = (c - x).abs
+	e_max_safe = e_max * 1.01 # add 1% safety margin because error used during calculation is an approximation
+  raise "sqrt(#{s}): deviation #{e} between correct result #{c} and approximation #{x} exceeds maximally allowed error #{e_max}" unless e <= e_max_safe
+end
+
+def assert_accum_devs(d : Result, e_max : Float64)
+  raise "Accumulated deviations exceed acceptable thresholds" unless d.n == 0 && d.x <= e_max && d.e <= e_max
 end
 
 def sqrt_by_iteration(s : Float64, e_max : Float64) : Result
@@ -58,7 +73,7 @@ end
 def initial(s : Float64, e_max : Float64) : Result
   Result.new 0, 
     e_max,          # terrible choice
-    error(s, e_max) # for x = eMax
+    error(s, e_max) # for x = e_max
 end
 
 def error(s : Float64, x : Float64) : Float64

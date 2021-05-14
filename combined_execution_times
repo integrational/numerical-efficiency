@@ -1,7 +1,7 @@
-crystal-by-ref:Time/s: 30
-crystal-by-value:Time/s: 24
+crystal-by-ref:Time/s: 31
+crystal-by-value:Time/s: 25
 go-by-ref:Time/s: 125
-go-by-value:Time/s: 115
+go-by-value:Time/s: 114
 java11:Time/s: 104
 java8:Time/s: 90
 kotlin:Time/s: 86

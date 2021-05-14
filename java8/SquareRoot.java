@@ -26,6 +26,9 @@ public class SquareRoot {
             final Result r1 = sqrtByIteration(s, eMax);
             final Result r2 = sqrtByRecursion(s, eMax);
 
+            assertCorrectness(r1.x, s, eMax);
+		    assertCorrectness(r2.x, s, eMax);
+
             dev = new Result(dev.n + abs(r1.n - r2.n), dev.x + abs(r1.x - r2.x), dev.e + abs(r1.e - r2.e));
 
             if (rep % step == 0) {
@@ -33,7 +36,19 @@ public class SquareRoot {
                 System.out.println(r2.n + ": " + sqrt(s) + " = " + r2.x + " +/- " + r2.e);
             }
         }
-        System.out.println("Deviation: " + dev.n + ": " + dev.x + ", " + dev.e);
+        System.out.println("Accumulated Deviations: " + dev.n + ": " + dev.x + ", " + dev.e);
+        assertAccumDevs(dev, eMax);
+    }
+
+    private static void assertCorrectness(double x, double s, double eMax) {
+        final double c = sqrt(s);
+        final double e = abs(c - x);
+        final double eMaxSafe = eMax * 1.01; // add 1% safety margin because error used during calculation is an approximation
+        assert e <= eMaxSafe : "sqrt(" + s + "): deviation " + e + " between correct result " + c + " and approximation " + x + " exceeds maximally allowed error " + eMax;
+    }
+    
+    private static void assertAccumDevs(Result d, double eMax) {
+        assert d.n == 0 && d.x <= eMax && d.e <= eMax : "Accumulated deviations exceed acceptable thresholds";
     }
 
     private static Result sqrtByIteration(double s, double eMax) {

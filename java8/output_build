@@ -1,93 +1,61 @@
 #1 [internal] load build definition from Dockerfile
-#1 sha256:c8f66a63af7b17eb107f54ea036e73a821c9f680263b2515abc6e1cf2eba419d
-#1 transferring dockerfile: 363B done
+#1 sha256:eb169638468b982f2e98b7c85c5adaac90dbbe1f2c3296bcd9383ad53f43ed39
+#1 transferring dockerfile: 370B done
 #1 DONE 0.0s
 
 #2 [internal] load .dockerignore
-#2 sha256:87df800f4dbd177fd491802df13417f8c43df266df13069ce5eaf404a9a2c88b
+#2 sha256:32cd6bf46dcd669f83356cfaf3aa74744f0d73371de78084c023c57372aae7fc
 #2 transferring context: 2B done
 #2 DONE 0.0s
 
 #3 [internal] load metadata for docker.io/library/openjdk:8
 #3 sha256:c1006613b124ab347fbb29ae49e2ab62add271baf34bdfe7a7a4c383ac159b76
-#3 DONE 1.5s
-
-#8 [internal] load build context
-#8 sha256:fff3e7c0cbb5357ad2717d39d47e0e05a127ae5d5337f3ddfb4aa5a4e2d6b5c1
-#8 transferring context: 5.25kB done
-#8 DONE 0.0s
+#3 DONE 0.8s
 
 #4 [builder 1/6] FROM docker.io/library/openjdk:8@sha256:840e786513eac99c76c7e57fe26d74ff17cb5715e7c145cb5bee6fca23020f9d
 #4 sha256:59c5edda93597e419e0d60223bb4fa0da24e027f2c90e8214a36a63200c3c5b7
-#4 resolve docker.io/library/openjdk:8@sha256:840e786513eac99c76c7e57fe26d74ff17cb5715e7c145cb5bee6fca23020f9d done
-#4 sha256:fb6a778e6477757ae1558536d2b6e9c2aff7db2d9dcc743e5cd7eb48000df6a3 0B / 209B 0.1s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 0B / 105.94MB 0.1s
-#4 sha256:eca41db787bd5bd8c895a527058681c66e2b45ce9cd126c365641cc52ae2b4c8 7.83kB / 7.83kB done
-#4 sha256:840e786513eac99c76c7e57fe26d74ff17cb5715e7c145cb5bee6fca23020f9d 1.04kB / 1.04kB done
-#4 sha256:66ec1c2ef56165af5791714cec54b871cf6cc43c828583aa59de1f8dbbb6e78b 1.79kB / 1.79kB done
-#4 sha256:fb6a778e6477757ae1558536d2b6e9c2aff7db2d9dcc743e5cd7eb48000df6a3 209B / 209B 0.3s done
-#4 extracting sha256:fb6a778e6477757ae1558536d2b6e9c2aff7db2d9dcc743e5cd7eb48000df6a3 done
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 6.29MB / 105.94MB 3.5s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 12.58MB / 105.94MB 6.2s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 18.87MB / 105.94MB 8.8s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 25.17MB / 105.94MB 10.0s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 31.46MB / 105.94MB 11.1s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 37.75MB / 105.94MB 12.4s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 44.04MB / 105.94MB 13.9s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 50.33MB / 105.94MB 14.8s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 56.62MB / 105.94MB 16.1s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 62.91MB / 105.94MB 17.6s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 69.21MB / 105.94MB 19.1s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 75.50MB / 105.94MB 20.6s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 81.79MB / 105.94MB 21.5s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 88.08MB / 105.94MB 22.4s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 94.37MB / 105.94MB 23.6s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 100.66MB / 105.94MB 24.6s
-#4 sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 105.94MB / 105.94MB 25.5s done
-#4 extracting sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807
-#4 extracting sha256:ae7884f0e61bb35dd6f0115f3cf30ba601894c5ced6bd898c12a40b1efeaa807 3.2s done
-#4 DONE 28.9s
+#4 DONE 0.0s
+
+#8 [internal] load build context
+#8 sha256:6d77993286986a56c91a33dc009284a3482e57c5043e6186caff6d8015796827
+#8 transferring context: 6.03kB done
+#8 DONE 0.0s
 
 #6 [builder 2/6] RUN javac -version
 #6 sha256:18fc49929d953c563b5c7a90e6e8a66e979b6158b17a571ffcb286f14b325470
-#6 ...
-
-#5 [stage-1 2/3] WORKDIR /app
-#5 sha256:b28002b25e3bd5eb53cbcc85bb70a4b601b8a3a287bfafdd6efb43548b864244
-#5 DONE 0.3s
-
-#6 [builder 2/6] RUN javac -version
-#6 sha256:18fc49929d953c563b5c7a90e6e8a66e979b6158b17a571ffcb286f14b325470
-#6 0.798 javac 1.8.0_292
-#6 DONE 0.8s
+#6 CACHED
 
 #7 [builder 3/6] WORKDIR /app
 #7 sha256:ca1e8a40e6ea67d9d7447596cd113043dd042bf6343f30a0d7e9173308e8b978
-#7 DONE 0.0s
+#7 CACHED
 
 #9 [builder 4/6] COPY . .
-#9 sha256:1a8335520fa93323f2023c9604314bc6ae57587386cfc5014d1a9f2a98d58d9c
+#9 sha256:c2e63455995e287e28a4a584dc6530afbd394b6f64d9d67d5ff6bb3fbe5db649
 #9 DONE 0.0s
 
 #10 [builder 5/6] RUN javac *.java
-#10 sha256:d5db0daa5b10d96671007d3a27b3661d1ea577ce6a8e3de87a4e5865f8407b1b
+#10 sha256:0b857187a43e9330a1e914d98866d4a02ed9bad7e25bd940366f8895cb6c2ef1
 #10 DONE 1.3s
 
 #11 [builder 6/6] RUN jar cvfe app.jar SquareRoot *.class
-#11 sha256:6436c8225e10ddda7378dc6ac65a7590da80fccffcaf6d18e865dd118b2d4cc7
-#11 0.426 added manifest
-#11 0.444 adding: SquareRoot$Result.class(in = 372) (out= 276)(deflated 25%)
-#11 0.445 adding: SquareRoot.class(in = 2321) (out= 1326)(deflated 42%)
-#11 DONE 0.5s
+#11 sha256:99f467204b2d796262d6e8e4d8461e7828bdbb4784df8f40196a36c413d9ce01
+#11 0.594 added manifest
+#11 0.616 adding: SquareRoot$Result.class(in = 372) (out= 274)(deflated 26%)
+#11 0.617 adding: SquareRoot.class(in = 3170) (out= 1822)(deflated 42%)
+#11 DONE 0.6s
+
+#5 [stage-1 2/3] WORKDIR /app
+#5 sha256:b28002b25e3bd5eb53cbcc85bb70a4b601b8a3a287bfafdd6efb43548b864244
+#5 CACHED
 
 #12 [stage-1 3/3] COPY --from=builder /app/app.jar .
-#12 sha256:4acc9f824b44162fdfdd160c4c789bf87d30d118bc8c3e5b45689ec56d6720a1
+#12 sha256:77ba398d7ae3e4caf9bf74b3bfce9eacfb65a98132be030b99ce2465f0a8d0b2
 #12 DONE 0.0s
 
 #13 exporting to image
 #13 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
 #13 exporting layers 0.0s done
-#13 writing image sha256:70ff11fc9753ab3bd553a9e38bf98e97786317b9af2c14f6a851c727c0233b3e done
+#13 writing image sha256:326188b776ffcfcbbee1b4081b5e29da3bf2a56acff55542d7ec8a9ed3430c48 done
 #13 naming to docker.io/library/square-root-java8 done
 #13 DONE 0.0s
 

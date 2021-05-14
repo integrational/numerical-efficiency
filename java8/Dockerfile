@@ -10,4 +10,4 @@ RUN jar cvfe app.jar SquareRoot *.class
 FROM openjdk:8
 WORKDIR /app
 COPY --from=builder /app/app.jar .
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-ea", "-jar", "app.jar"]

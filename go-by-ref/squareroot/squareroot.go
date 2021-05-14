@@ -27,6 +27,9 @@ func allSqrts(reps, step int, eMax float64) {
 		r1 := sqrtByIteration(s, eMax)
 		r2 := sqrtByRecursion(s, eMax)
 
+		assertCorrectness(r1.x, s, eMax)
+		assertCorrectness(r2.x, s, eMax)
+
 		dev.n += int(math.Abs(float64(r1.n - r2.n)))
 		dev.x += math.Abs(r1.x - r2.x)
 		dev.e += math.Abs(r1.e - r2.e)
@@ -36,7 +39,24 @@ func allSqrts(reps, step int, eMax float64) {
 			fmt.Println(r2.n, ":", math.Sqrt(s), "=", r2.x, "+/-", r2.e)
 		}
 	}
-	fmt.Println("Deviation:", dev.n, ":", dev.x, ",", dev.e)
+	fmt.Println("Accumulated Deviations:", dev.n, ":", dev.x, ",", dev.e)
+	assertAccumDevs(dev, eMax)
+}
+
+func assertCorrectness(x, s, eMax float64) {
+	c := math.Sqrt(s)
+	e := math.Abs(c - x)
+	eMaxSafe := eMax * 1.01 // add 1% safety margin because error used during calculation is an approximation
+	if e > eMaxSafe {
+		panic(fmt.Sprint("sqrt(", s, "): deviation ", e, " between correct result ", c,
+			" and approximation ", x, " exceeds maximally allowed error ", eMax))
+	}
+}
+
+func assertAccumDevs(d Result, eMax float64) {
+	if d.n > 0 || d.x > eMax || d.e > eMax {
+		panic("Accumulated deviations exceed acceptable thresholds")
+	}
 }
 
 func sqrtByIteration(s, eMax float64) *Result {
