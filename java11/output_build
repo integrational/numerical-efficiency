@@ -1,10 +1,10 @@
 #1 [internal] load build definition from Dockerfile
-#1 sha256:e74074baaf604feccaccd0361b1345dad560b118c1ca0117587427c60db2773f
+#1 sha256:bec6d893aedae1889e92f3d6250ec15765542eb4bb8e16c4bd1894de3733f71e
 #1 transferring dockerfile: 372B done
 #1 DONE 0.0s
 
 #2 [internal] load .dockerignore
-#2 sha256:a3aa6a2287403433d82f1765f68359f33b1e6b2d58cc8dde0fbab59b5c012002
+#2 sha256:76f79d5cf4625af336de0c81f93dcd27fb5bbe287f55071dda79365c0be11639
 #2 transferring context: 2B done
 #2 DONE 0.0s
 
@@ -13,12 +13,12 @@
 #3 ...
 
 #4 [auth] library/openjdk:pull token for registry-1.docker.io
-#4 sha256:58921788f8c4934bd582c98bd1d12ac8d921052c68b02471781f53563b3ffdfe
+#4 sha256:a692f567916d2f1f8597c1a6ad09085b27e14e3a384f160688c9df2235e04ab9
 #4 DONE 0.0s
 
 #3 [internal] load metadata for docker.io/library/openjdk:11
 #3 sha256:87dc9b3cee4adf6787fd792601b37fcaad0ed6bd5314a02f15c26446f91634ad
-#3 DONE 1.8s
+#3 DONE 1.9s
 
 #5 [builder 1/6] FROM docker.io/library/openjdk:11@sha256:69ac1ba2b76e5376487300e4a379f97306b30a6d693679d3af01cc6d8923360e
 #5 sha256:c31c6ffc50ba07107a3998a2157afcb29dc21d4d7da7592844fcd1317ef5b4de
@@ -30,42 +30,42 @@
 #6 CACHED
 
 #9 [internal] load build context
-#9 sha256:ac94c065e3cd1445c9c2703b1253880981bd602777184ea4823b86b5cc13aa1d
-#9 transferring context: 6.29kB done
+#9 sha256:1a9c84d3ba606c95c58af439a0f41755d6a3734476a625c413beccf6a08f2be9
+#9 transferring context: 6.30kB done
 #9 DONE 0.0s
 
 #7 [builder 2/6] RUN javac -version
 #7 sha256:1ddae0a9e14bfe052e02635eb104fead1424592df71dbf3437ef000349ea5431
-#7 0.897 javac 11.0.11
-#7 DONE 0.9s
+#7 0.427 javac 11.0.11
+#7 DONE 0.5s
 
 #8 [builder 3/6] WORKDIR /app
 #8 sha256:986c06e2234d53c3a1bcb1d914e58e2b11238b5b903deca46d586c02c5ebd1a0
 #8 DONE 0.0s
 
 #10 [builder 4/6] COPY . .
-#10 sha256:20382f639c1b9f1eb3e198b909a810d2abc544a7a88a1cf520e3d085800a2269
+#10 sha256:566892557eba387a23f854663d204e86e1e4805f9338d92e3e98b1eeb6dbe1d4
 #10 DONE 0.0s
 
 #11 [builder 5/6] RUN javac *.java
-#11 sha256:c5057a586c9a54238a501c3fac86ee72cbff2acf7f86c2c4e8fe8e5d4dd48826
+#11 sha256:4076684a0673393304c15b47d1b59c0c391ceadd089d02d9f38b056b75aa0d86
 #11 DONE 1.0s
 
 #12 [builder 6/6] RUN jar cvfe app.jar SquareRoot *.class
-#12 sha256:5bea53bfbc8a39e334d8840c79a416f9cd39a4c992459924b2a2c28f624d57ea
-#12 0.385 added manifest
-#12 0.408 adding: SquareRoot$Result.class(in = 391) (out= 289)(deflated 26%)
-#12 0.408 adding: SquareRoot.class(in = 3274) (out= 1862)(deflated 43%)
+#12 sha256:6d07e5d463f3a0086c7ccfb415d90b2591f94541fd3320cce103aa36296f6a6e
+#12 0.372 added manifest
+#12 0.394 adding: SquareRoot$Result.class(in = 391) (out= 289)(deflated 26%)
+#12 0.395 adding: SquareRoot.class(in = 3274) (out= 1862)(deflated 43%)
 #12 DONE 0.4s
 
 #13 [stage-1 3/3] COPY --from=builder /app/app.jar .
-#13 sha256:8d0839e95c76f0486b5bff35a5320a38d1af9001e273efe4589959fe1e41df67
+#13 sha256:30489981af65f9cb16505dcc898f2e1520f6e011a24864e6230bee9c36c787e6
 #13 DONE 0.0s
 
 #14 exporting to image
 #14 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
 #14 exporting layers 0.0s done
-#14 writing image sha256:bc4a3946da44e3afec95c8d90c795a1adf192b78040667de0748804e2095b78b done
+#14 writing image sha256:9c9ac4574b7ef09847742bdcf6ca58c316f90f11f673bd562d38b6f127145087 done
 #14 naming to docker.io/library/square-root-java11 done
 #14 DONE 0.0s
 

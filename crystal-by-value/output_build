@@ -1,10 +1,10 @@
 #1 [internal] load build definition from Dockerfile
-#1 sha256:d057581347a8d600834268c70e40dd48f2e9b498ba3984ffdaa38c4e52d9f69f
+#1 sha256:5113286ae9e86a56f3667debd4bd2aa89c52bd358bb597142afe9eccd2690711
 #1 transferring dockerfile: 356B done
 #1 DONE 0.0s
 
 #2 [internal] load .dockerignore
-#2 sha256:cc402dba084f1a4d343dcb5bfcd7281c46991bcaf4dfb2f90d43e38e05fb9fe0
+#2 sha256:e8279dfa0c7a35e02555cfb8e44ddd76f275da71acd684a9ef53c193e9d3d000
 #2 transferring context: 2B done
 #2 DONE 0.0s
 
@@ -12,25 +12,25 @@
 #3 sha256:a6f11eb7466cbe0430281362036f7d3d23c4e21abeceda46ace442a998260b66
 #3 DONE 0.7s
 
-#4 [stage-1 1/2] WORKDIR /app
-#4 sha256:3a096bdcda072493d56e82d073cea343f6fc1fc2e36e272fd671a9964b829e72
-#4 CACHED
-
 #5 [builder 1/5] FROM docker.io/crystallang/crystal:latest-alpine@sha256:c9b59f80f6b3821596f45494cd56c3b08048067e18ff0b12c26888830fe167d6
 #5 sha256:3d6617ec30a2d56231c811af804c7e5ae2c80b5f791bcc1bab74ada0274190e7
 #5 CACHED
 
+#4 [stage-1 1/2] WORKDIR /app
+#4 sha256:3a096bdcda072493d56e82d073cea343f6fc1fc2e36e272fd671a9964b829e72
+#4 CACHED
+
 #8 [internal] load build context
-#8 sha256:56bb5ff359d89059e1668f580f5055505ae63c334a2a4f864e9c949a28ba6bf8
-#8 transferring context: 4.72kB 0.0s done
+#8 sha256:bde902daec055fbc3a616db5a7aa2f0f9f56496f954a8b857b240f81db3b1012
+#8 transferring context: 4.72kB done
 #8 DONE 0.0s
 
 #6 [builder 2/5] RUN crystal version
 #6 sha256:51136f2503ae627d408fabc59d28a1cfba9243224a452984142db13e66a7d687
-#6 0.289 Crystal 1.0.0 [dd40a2442] (2021-03-22)
-#6 0.289 
-#6 0.289 LLVM: 10.0.0
-#6 0.289 Default target: x86_64-unknown-linux-musl
+#6 0.276 Crystal 1.0.0 [dd40a2442] (2021-03-22)
+#6 0.276 
+#6 0.276 LLVM: 10.0.0
+#6 0.276 Default target: x86_64-unknown-linux-musl
 #6 DONE 0.3s
 
 #7 [builder 3/5] WORKDIR /app
@@ -38,21 +38,21 @@
 #7 DONE 0.0s
 
 #9 [builder 4/5] COPY . .
-#9 sha256:8f11efa705af8de40de9801a6a7454c74c28824ec1a794476a8f301119c1972d
+#9 sha256:bdb86abf00ae20452da79471f2db1bfd65c253257bdefca4f923361385a37586
 #9 DONE 0.0s
 
 #10 [builder 5/5] RUN crystal build -o app *.cr --release --static
-#10 sha256:5f10308ec9c5d13f4e0e06c3d968357ca05a52f67ad382b3bd5af8f2066de402
-#10 DONE 11.2s
+#10 sha256:cb6d4565cf48393814d033d889e26c12c3b9c39e10afd80c406f60cb96506a96
+#10 DONE 11.1s
 
 #11 [stage-1 2/2] COPY --from=builder /app/app .
-#11 sha256:a82ecb293e4dcfbdad17bcdde51b889c0c763b816992143e58e02324ef87f390
+#11 sha256:069625abca75b291bcf28626180bd43e58734593cb91ed2bd98c99965ec1f2b6
 #11 DONE 0.0s
 
 #12 exporting to image
 #12 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
 #12 exporting layers 0.0s done
-#12 writing image sha256:07c706c43ccb1fa067b5946766e38e4ff51205bed1f2232334c32bf68efaed59 done
+#12 writing image sha256:2702f316a368f5a35fc6049bf353e056f7e2498ce039f71789283bf074d24cd6 done
 #12 naming to docker.io/library/square-root-crystal-by-value done
 #12 DONE 0.0s
 

@@ -1,10 +1,10 @@
 #1 [internal] load build definition from Dockerfile
-#1 sha256:986cad96e4f26572a0b43cea3683587d05c72b1dc4b81c1b340fcce04d924296
+#1 sha256:0018644249a53300d85431eba5cdf3aa7a40dcbb0bd03ab072cb8e63bbf78fc3
 #1 transferring dockerfile: 854B done
 #1 DONE 0.0s
 
 #2 [internal] load .dockerignore
-#2 sha256:5eaf2bad95f59021bc07b106922e3899626e8ab0ef987c418fe5547ea4e6bd24
+#2 sha256:a18a8c66d66c23787a67802bd4b727abab1882b8886c0a9bb384447fb37e3179
 #2 transferring context: 96B done
 #2 DONE 0.0s
 
@@ -13,140 +13,140 @@
 #3 ...
 
 #4 [auth] library/openjdk:pull token for registry-1.docker.io
-#4 sha256:ac325a71cb3be00890f5be9797451188482030bf8e27d67b8c290d6cfd026a52
+#4 sha256:bafc4fad0477a20396d825e7ce3523387b7998e555a01d9a4daeee3b5fd40155
 #4 DONE 0.0s
 
 #3 [internal] load metadata for docker.io/library/openjdk:8
 #3 sha256:c1006613b124ab347fbb29ae49e2ab62add271baf34bdfe7a7a4c383ac159b76
-#3 DONE 1.6s
+#3 DONE 1.7s
 
-#5 [builder 1/7] FROM docker.io/library/openjdk:8@sha256:391437351a4b430e10091729b42ae3f9adc1c2817bde687f3186b3b488e7760c
-#5 sha256:6a7e65ce9fe278f16fbd8d96cf045a3a52928f83e4a7660df1f28aad3206acde
-#5 resolve docker.io/library/openjdk:8@sha256:391437351a4b430e10091729b42ae3f9adc1c2817bde687f3186b3b488e7760c done
+#14 [builder 1/7] FROM docker.io/library/openjdk:8@sha256:391437351a4b430e10091729b42ae3f9adc1c2817bde687f3186b3b488e7760c
+#14 sha256:6a7e65ce9fe278f16fbd8d96cf045a3a52928f83e4a7660df1f28aad3206acde
+#14 resolve docker.io/library/openjdk:8@sha256:391437351a4b430e10091729b42ae3f9adc1c2817bde687f3186b3b488e7760c done
+#14 CACHED
+
+#5 [stage-1 2/3] WORKDIR /app
+#5 sha256:1723127baf1d13ed12fd1bfcf09a92154b78e1f5073dd35af1ffcd9352c951f8
 #5 CACHED
 
-#6 [stage-1 2/3] WORKDIR /app
-#6 sha256:1723127baf1d13ed12fd1bfcf09a92154b78e1f5073dd35af1ffcd9352c951f8
-#6 CACHED
+#10 [internal] load build context
+#10 sha256:4154baff0e27f68a89f01d00a93835b5252d60a621f64f1d11aa636f7babde60
+#10 transferring context: 440.94kB 0.0s done
+#10 DONE 0.1s
 
-#11 [internal] load build context
-#11 sha256:48954dc27dbd25735d3b730dc3a627ee91a48f33f21d36860e073a77319d7fbd
-#11 transferring context: 439.66kB 0.1s done
-#11 DONE 0.1s
+#6 [builder 2/7] RUN echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" > /etc/apt/sources.list.d/sbt.list                          && echo "deb https://repo.scala-sbt.org/scalasbt/debian /"        > /etc/apt/sources.list.d/sbt_old.list                      && curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | apt-key add  && apt update && apt upgrade -y && apt install sbt -y
+#6 sha256:d8a24565caae448a23e13e2a07ea3b02b600ce809d3e43ac68c9913d68a16fd1
+#6 0.325 Warning: apt-key output should not be parsed (stdout is not a terminal)
+#6 1.375 OK
+#6 1.388 
+#6 1.388 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+#6 1.388 
+#6 1.573 Get:1 http://security.debian.org/debian-security buster/updates InRelease [65.4 kB]
+#6 1.590 Get:2 http://deb.debian.org/debian buster InRelease [121 kB]
+#6 1.797 Get:3 http://deb.debian.org/debian buster-updates InRelease [51.9 kB]
+#6 1.853 Get:4 http://security.debian.org/debian-security buster/updates/main amd64 Packages [292 kB]
+#6 2.116 Get:5 http://deb.debian.org/debian buster/main amd64 Packages [7907 kB]
+#6 3.444 Get:6 https://scala.jfrog.io/artifactory/debian all InRelease [3558 B]
+#6 3.773 Ign:7 https://scala.jfrog.io/artifactory/debian  InRelease
+#6 3.988 Get:9 https://scala.jfrog.io/artifactory/debian all/main amd64 Packages [761 B]
+#6 4.186 Get:8 https://scala.jfrog.io/artifactory/debian  Release [815 B]
+#6 4.391 Get:10 https://scala.jfrog.io/artifactory/debian  Release.gpg [821 B]
+#6 4.715 Get:11 https://scala.jfrog.io/artifactory/debian  Packages [5122 B]
+#6 5.774 Get:12 http://deb.debian.org/debian buster-updates/main amd64 Packages [10.9 kB]
+#6 6.709 Fetched 8460 kB in 5s (1603 kB/s)
+#6 6.709 Reading package lists...
+#6 7.323 Building dependency tree...
+#6 7.474 Reading state information...
+#6 7.492 1 package can be upgraded. Run 'apt list --upgradable' to see it.
+#6 7.501 
+#6 7.501 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+#6 7.501 
+#6 7.510 Reading package lists...
+#6 8.093 Building dependency tree...
+#6 8.237 Reading state information...
+#6 8.263 Calculating upgrade...
+#6 8.426 The following packages will be upgraded:
+#6 8.427   liblz4-1
+#6 8.562 1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#6 8.562 Need to get 53.3 kB of archives.
+#6 8.562 After this operation, 0 B of additional disk space will be used.
+#6 8.562 Get:1 http://security.debian.org/debian-security buster/updates/main amd64 liblz4-1 amd64 1.8.3-1+deb10u1 [53.3 kB]
+#6 8.748 debconf: delaying package configuration, since apt-utils is not installed
+#6 8.773 Fetched 53.3 kB in 0s (325 kB/s)
+#6 8.795 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 12572 files and directories currently installed.)
+#6 8.805 Preparing to unpack .../liblz4-1_1.8.3-1+deb10u1_amd64.deb ...
+#6 8.812 Unpacking liblz4-1:amd64 (1.8.3-1+deb10u1) over (1.8.3-1) ...
+#6 8.847 Setting up liblz4-1:amd64 (1.8.3-1+deb10u1) ...
+#6 8.864 Processing triggers for libc-bin (2.28-10) ...
+#6 8.902 
+#6 8.902 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+#6 8.902 
+#6 8.910 Reading package lists...
+#6 9.520 Building dependency tree...
+#6 9.662 Reading state information...
+#6 9.855 The following NEW packages will be installed:
+#6 9.855   sbt
+#6 11.69 0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+#6 11.69 Need to get 19.6 kB of archives.
+#6 11.69 After this operation, 48.1 kB of additional disk space will be used.
+#6 11.69 Get:1 https://scala.jfrog.io/artifactory/debian all/main amd64 sbt all 1.5.3 [19.6 kB]
+#6 12.19 debconf: delaying package configuration, since apt-utils is not installed
+#6 12.21 Fetched 19.6 kB in 2s (8926 B/s)
+#6 12.23 Selecting previously unselected package sbt.
+#6 12.23 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 12572 files and directories currently installed.)
+#6 12.24 Preparing to unpack .../apt/archives/sbt_1.5.3_all.deb ...
+#6 12.25 Unpacking sbt (1.5.3) ...
+#6 12.28 Setting up sbt (1.5.3) ...
+#6 12.29 Creating system group: sbt
+#6 12.30 Creating system user: sbt in sbt with sbt daemon-user and shell /bin/false
+#6 DONE 12.4s
 
-#7 [builder 2/7] RUN echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" > /etc/apt/sources.list.d/sbt.list                          && echo "deb https://repo.scala-sbt.org/scalasbt/debian /"        > /etc/apt/sources.list.d/sbt_old.list                      && curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | apt-key add  && apt update && apt upgrade -y && apt install sbt -y
-#7 sha256:d8a24565caae448a23e13e2a07ea3b02b600ce809d3e43ac68c9913d68a16fd1
-#7 0.331 Warning: apt-key output should not be parsed (stdout is not a terminal)
-#7 1.023 OK
-#7 1.038 
-#7 1.038 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-#7 1.038 
-#7 1.219 Get:1 http://security.debian.org/debian-security buster/updates InRelease [65.4 kB]
-#7 1.220 Get:2 http://deb.debian.org/debian buster InRelease [121 kB]
-#7 1.363 Get:3 http://deb.debian.org/debian buster-updates InRelease [51.9 kB]
-#7 1.456 Get:4 http://security.debian.org/debian-security buster/updates/main amd64 Packages [292 kB]
-#7 1.564 Get:5 http://deb.debian.org/debian buster/main amd64 Packages [7907 kB]
-#7 3.160 Get:6 https://scala.jfrog.io/artifactory/debian all InRelease [3558 B]
-#7 3.366 Ign:7 https://scala.jfrog.io/artifactory/debian  InRelease
-#7 3.496 Get:9 http://deb.debian.org/debian buster-updates/main amd64 Packages [10.9 kB]
-#7 3.572 Get:10 https://scala.jfrog.io/artifactory/debian all/main amd64 Packages [761 B]
-#7 3.771 Get:8 https://scala.jfrog.io/artifactory/debian  Release [815 B]
-#7 3.983 Get:11 https://scala.jfrog.io/artifactory/debian  Release.gpg [821 B]
-#7 4.374 Get:12 https://scala.jfrog.io/artifactory/debian  Packages [5122 B]
-#7 4.457 Fetched 8460 kB in 3s (2508 kB/s)
-#7 4.457 Reading package lists...
-#7 5.098 Building dependency tree...
-#7 5.255 Reading state information...
-#7 5.276 1 package can be upgraded. Run 'apt list --upgradable' to see it.
-#7 5.285 
-#7 5.285 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-#7 5.285 
-#7 5.294 Reading package lists...
-#7 5.912 Building dependency tree...
-#7 6.054 Reading state information...
-#7 6.078 Calculating upgrade...
-#7 6.242 The following packages will be upgraded:
-#7 6.242   liblz4-1
-#7 6.357 1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-#7 6.357 Need to get 53.3 kB of archives.
-#7 6.357 After this operation, 0 B of additional disk space will be used.
-#7 6.357 Get:1 http://security.debian.org/debian-security buster/updates/main amd64 liblz4-1 amd64 1.8.3-1+deb10u1 [53.3 kB]
-#7 6.522 debconf: delaying package configuration, since apt-utils is not installed
-#7 6.552 Fetched 53.3 kB in 0s (393 kB/s)
-#7 6.574 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 12572 files and directories currently installed.)
-#7 6.584 Preparing to unpack .../liblz4-1_1.8.3-1+deb10u1_amd64.deb ...
-#7 6.592 Unpacking liblz4-1:amd64 (1.8.3-1+deb10u1) over (1.8.3-1) ...
-#7 6.628 Setting up liblz4-1:amd64 (1.8.3-1+deb10u1) ...
-#7 6.647 Processing triggers for libc-bin (2.28-10) ...
-#7 6.682 
-#7 6.683 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
-#7 6.683 
-#7 6.690 Reading package lists...
-#7 7.273 Building dependency tree...
-#7 7.422 Reading state information...
-#7 7.601 The following NEW packages will be installed:
-#7 7.601   sbt
-#7 9.199 0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
-#7 9.199 Need to get 19.6 kB of archives.
-#7 9.199 After this operation, 48.1 kB of additional disk space will be used.
-#7 9.199 Get:1 https://scala.jfrog.io/artifactory/debian all/main amd64 sbt all 1.5.3 [19.6 kB]
-#7 9.529 debconf: delaying package configuration, since apt-utils is not installed
-#7 9.550 Fetched 19.6 kB in 2s (11.0 kB/s)
-#7 9.575 Selecting previously unselected package sbt.
-#7 9.575 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 12572 files and directories currently installed.)
-#7 9.584 Preparing to unpack .../apt/archives/sbt_1.5.3_all.deb ...
-#7 9.588 Unpacking sbt (1.5.3) ...
-#7 9.616 Setting up sbt (1.5.3) ...
-#7 9.625 Creating system group: sbt
-#7 9.637 Creating system user: sbt in sbt with sbt daemon-user and shell /bin/false
-#7 DONE 9.7s
+#7 [builder 3/7] WORKDIR /tmp
+#7 sha256:1f3989b95e811b515010ea4d1baf453129d4108dc44670e25d33439c7e1bc848
+#7 DONE 0.0s
 
-#8 [builder 3/7] WORKDIR /tmp
-#8 sha256:1f3989b95e811b515010ea4d1baf453129d4108dc44670e25d33439c7e1bc848
-#8 DONE 0.0s
+#8 [builder 4/7] RUN sbt version
+#8 sha256:d8e6a034bb386a03b1560abd7617af818a618507a9c977d8588ab5aade7f9819
+#8 0.326 downloading sbt launcher 1.5.3
+#8 2.293 [info] [launcher] getting org.scala-sbt sbt 1.5.3  (this may take some time)...
+#8 45.50 [info] [launcher] getting Scala 2.12.14 (for sbt)...
+#8 47.64 [info] Updated file /tmp/project/build.properties: set sbt.version to 1.5.3
+#8 47.66 [info] welcome to sbt 1.5.3 (Oracle Corporation Java 1.8.0_292)
+#8 48.93 [info] loading project definition from /tmp/project
+#8 51.34 [info] set current project to tmp (in build file:/tmp/)
+#8 51.55 [info] 0.1.0-SNAPSHOT
+#8 DONE 52.1s
 
-#9 [builder 4/7] RUN sbt version
-#9 sha256:d8e6a034bb386a03b1560abd7617af818a618507a9c977d8588ab5aade7f9819
-#9 0.325 downloading sbt launcher 1.5.3
-#9 1.766 [info] [launcher] getting org.scala-sbt sbt 1.5.3  (this may take some time)...
-#9 28.89 [info] [launcher] getting Scala 2.12.14 (for sbt)...
-#9 31.00 [info] Updated file /tmp/project/build.properties: set sbt.version to 1.5.3
-#9 31.07 [info] welcome to sbt 1.5.3 (Oracle Corporation Java 1.8.0_292)
-#9 32.75 [info] loading project definition from /tmp/project
-#9 35.50 [info] set current project to tmp (in build file:/tmp/)
-#9 35.71 [info] 0.1.0-SNAPSHOT
-#9 DONE 36.3s
+#9 [builder 5/7] WORKDIR /app
+#9 sha256:a0648f8d52a24f365d562603b2ce9f5b5564dcf0fd46a55e61c280cc7d38629a
+#9 DONE 0.0s
 
-#10 [builder 5/7] WORKDIR /app
-#10 sha256:a0648f8d52a24f365d562603b2ce9f5b5564dcf0fd46a55e61c280cc7d38629a
-#10 DONE 0.0s
+#11 [builder 6/7] COPY . .
+#11 sha256:cb4c26b7d29297aec0174a4f1e2e01957b9c342bbf303704fad51c2218a1e0ac
+#11 DONE 0.0s
 
-#12 [builder 6/7] COPY . .
-#12 sha256:85f265de0aae539c70090c6aec6ceb4d8c9bd516e1c0d65ed14a4df0439721fe
-#12 DONE 0.0s
+#12 [builder 7/7] RUN sbt assembly
+#12 sha256:1265978f1816cbad416c15f16258da8e0ba7de81ec60d38ded6db778ae712872
+#12 2.018 [info] welcome to sbt 1.5.3 (Oracle Corporation Java 1.8.0_292)
+#12 4.874 [info] loading settings for project app-build from plugins.sbt ...
+#12 5.711 [info] loading project definition from /app/project
+#12 14.55 [info] loading settings for project root from build.sbt ...
+#12 14.69 [info] set current project to square-root-scala3 (in build file:/app/)
+#12 33.52 [info] compiling 1 Scala source to /app/target/scala-3.0.0/classes ...
+#12 37.43 [info] done compiling
+#12 38.40 [info] Strategy 'discard' was applied to a file (Run the task at debug level to see details)
+#12 38.40 [info] Strategy 'rename' was applied to 2 files (Run the task at debug level to see details)
+#12 39.30 [success] Total time: 24 s, completed Jun 13, 2021 8:39:02 PM
+#12 DONE 40.0s
 
-#13 [builder 7/7] RUN sbt assembly
-#13 sha256:62ef0dd930948428ca077a283933b07b523f14090e8ed73c13784b79b0da374d
-#13 2.407 [info] welcome to sbt 1.5.3 (Oracle Corporation Java 1.8.0_292)
-#13 5.859 [info] loading settings for project app-build from plugins.sbt ...
-#13 6.805 [info] loading project definition from /app/project
-#13 15.68 [info] loading settings for project root from build.sbt ...
-#13 15.85 [info] set current project to square-root-scala3 (in build file:/app/)
-#13 36.39 [info] compiling 1 Scala source to /app/target/scala-3.0.0/classes ...
-#13 40.97 [info] done compiling
-#13 42.53 [info] Strategy 'discard' was applied to a file (Run the task at debug level to see details)
-#13 42.53 [info] Strategy 'rename' was applied to 2 files (Run the task at debug level to see details)
-#13 44.04 [success] Total time: 28 s, completed Jun 13, 2021 8:14:50 PM
-#13 DONE 44.7s
-
-#14 [stage-1 3/3] COPY --from=builder /app/target/scala-3*/square-root-scala3-assembly-*.jar ./app.jar
-#14 sha256:712eea47b83ceea4e00a48751280a10544bb7eb658de8a83025773cab932f37d
-#14 DONE 0.1s
+#13 [stage-1 3/3] COPY --from=builder /app/target/scala-3*/square-root-scala3-assembly-*.jar ./app.jar
+#13 sha256:093b0af37a62f1dd6ef393239f4cf7235e913de8974abe8f8b7abe1d297f5622
+#13 DONE 0.1s
 
 #15 exporting to image
 #15 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
 #15 exporting layers 0.0s done
-#15 writing image sha256:f862af074beb4d75d8462a388c62f22c3f14705fb45dd45140e7812a6c627ccf done
+#15 writing image sha256:d13b379a91ee9581c930201e201612f7053d79d573858ff17e7a4fdfe0b2114d done
 #15 naming to docker.io/library/square-root-scala3 done
 #15 DONE 0.1s
 
