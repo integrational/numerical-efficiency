@@ -1,10 +1,10 @@
 #1 [internal] load build definition from Dockerfile
-#1 sha256:57c8a377a6c0a8859300b2b0fab3086d8e4744831c39159ed2663c395884e03a
+#1 sha256:c3f260a34dd84b64cc661758aed5bdd96658861162bfb44e396e48d7b8373dde
 #1 transferring dockerfile: 1.08kB done
 #1 DONE 0.0s
 
 #2 [internal] load .dockerignore
-#2 sha256:18289d55d92285d666e05a644f94ac770d4a2b41a86187e7af39764880d35a9b
+#2 sha256:3882bbb10726983bb991ae0db9eab4467d367eb4f0f27b14c80be7003733ed53
 #2 transferring context: 2B done
 #2 DONE 0.0s
 
@@ -12,66 +12,228 @@
 #3 sha256:c1006613b124ab347fbb29ae49e2ab62add271baf34bdfe7a7a4c383ac159b76
 #3 DONE 0.7s
 
-#4 [builder 1/9] FROM docker.io/library/openjdk:8@sha256:840e786513eac99c76c7e57fe26d74ff17cb5715e7c145cb5bee6fca23020f9d
-#4 sha256:59c5edda93597e419e0d60223bb4fa0da24e027f2c90e8214a36a63200c3c5b7
-#4 DONE 0.0s
+#4 [builder 1/9] FROM docker.io/library/openjdk:8@sha256:391437351a4b430e10091729b42ae3f9adc1c2817bde687f3186b3b488e7760c
+#4 sha256:6a7e65ce9fe278f16fbd8d96cf045a3a52928f83e4a7660df1f28aad3206acde
+#4 resolve docker.io/library/openjdk:8@sha256:391437351a4b430e10091729b42ae3f9adc1c2817bde687f3186b3b488e7760c done
+#4 CACHED
+
+#5 [stage-1 2/3] WORKDIR /app
+#5 sha256:1723127baf1d13ed12fd1bfcf09a92154b78e1f5073dd35af1ffcd9352c951f8
+#5 CACHED
 
 #12 [internal] load build context
-#12 sha256:65f502e8f82cabf9b81c440f18907dabbeb51f34d7aeb19cb292d8acb29ac492
-#12 transferring context: 6.05kB done
+#12 sha256:651818dcb3bd0ed2e72219228cad9dd09f1303363766c1785dcd456e65be8971
+#12 transferring context: 5.77kB done
 #12 DONE 0.0s
 
-#7 [builder 3/9] WORKDIR /opt
-#7 sha256:05ef1fb8f33137a601307a469b67de7d891b3214de00966cc0d126a30653f8ae
-#7 CACHED
-
-#9 [builder 5/9] RUN unzip kc.zip # unzips to kotlinc directory
-#9 sha256:0e40310d76ab61c5831356438e43b2fbaee8bdbc0b109c3486aaf19ca9a8dc81
-#9 CACHED
-
-#10 [builder 6/9] RUN kotlinc -version
-#10 sha256:001a54d31ded0318dde7b9900d3de4d94ccf45548ef0d80922e756628ebc8007
-#10 CACHED
-
 #6 [builder 2/9] RUN apt update && apt upgrade -y && apt install curl unzip -y
-#6 sha256:2d064d3d0194257101fb7bfb63d031855621692972a2b844b49a768d5d140645
-#6 CACHED
+#6 sha256:dbcdbe4aaccee1b93b3d67e11dba45a47bccd15cfca6dc8dce81d4d87dcc916c
+#6 0.262 
+#6 0.262 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+#6 0.262 
+#6 0.428 Get:1 http://security.debian.org/debian-security buster/updates InRelease [65.4 kB]
+#6 0.451 Get:2 http://deb.debian.org/debian buster InRelease [121 kB]
+#6 0.558 Get:3 http://deb.debian.org/debian buster-updates InRelease [51.9 kB]
+#6 0.653 Get:4 http://security.debian.org/debian-security buster/updates/main amd64 Packages [292 kB]
+#6 0.783 Get:5 http://deb.debian.org/debian buster/main amd64 Packages [7907 kB]
+#6 4.714 Get:6 http://deb.debian.org/debian buster-updates/main amd64 Packages [10.9 kB]
+#6 5.690 Fetched 8449 kB in 5s (1565 kB/s)
+#6 5.690 Reading package lists...
+#6 6.384 Building dependency tree...
+#6 6.545 Reading state information...
+#6 6.566 1 package can be upgraded. Run 'apt list --upgradable' to see it.
+#6 6.574 
+#6 6.574 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+#6 6.574 
+#6 6.583 Reading package lists...
+#6 7.196 Building dependency tree...
+#6 7.350 Reading state information...
+#6 7.373 Calculating upgrade...
+#6 7.554 The following packages will be upgraded:
+#6 7.556   liblz4-1
+#6 7.699 1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#6 7.699 Need to get 53.3 kB of archives.
+#6 7.699 After this operation, 0 B of additional disk space will be used.
+#6 7.699 Get:1 http://security.debian.org/debian-security buster/updates/main amd64 liblz4-1 amd64 1.8.3-1+deb10u1 [53.3 kB]
+#6 7.890 debconf: delaying package configuration, since apt-utils is not installed
+#6 7.916 Fetched 53.3 kB in 0s (290 kB/s)
+#6 7.937 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 12572 files and directories currently installed.)
+#6 7.948 Preparing to unpack .../liblz4-1_1.8.3-1+deb10u1_amd64.deb ...
+#6 7.957 Unpacking liblz4-1:amd64 (1.8.3-1+deb10u1) over (1.8.3-1) ...
+#6 7.994 Setting up liblz4-1:amd64 (1.8.3-1+deb10u1) ...
+#6 8.014 Processing triggers for libc-bin (2.28-10) ...
+#6 8.053 
+#6 8.053 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+#6 8.053 
+#6 8.060 Reading package lists...
+#6 8.690 Building dependency tree...
+#6 8.833 Reading state information...
+#6 8.996 unzip is already the newest version (6.0-23+deb10u2).
+#6 8.996 curl is already the newest version (7.64.0-4+deb10u2).
+#6 8.996 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#6 DONE 9.1s
+
+#7 [builder 3/9] WORKDIR /opt
+#7 sha256:20fb763780ccf591401662f3efe42b68bf60a9914c2611119f664a5c5a89be87
+#7 DONE 0.0s
 
 #8 [builder 4/9] RUN export LOC="$(curl -IBs https://github.com/JetBrains/kotlin/releases/latest | sed 's|[^[:print:]]||g' | grep -i 'location:')"  && export VER=$(echo $LOC | sed 's|.*tag/v||g')                                                                                   && echo "Downloading Kotlin compiler version $VER"                                                                                && curl -o kc.zip -L "https://github.com/JetBrains/kotlin/releases/download/v$VER/kotlin-compiler-$VER.zip"
-#8 sha256:15c76c1774f0e39c2177149ee33299f4292ed1ab79c943f9e2d3a4aaaa9bae90
-#8 CACHED
+#8 sha256:0fd829be8bd720f83bdbf63188575ad5b2f7d1e379ba2ca46df209a64b219893
+#8 0.683 Downloading Kotlin compiler version 1.5.10
+#8 0.692   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+#8 0.692                                  Dload  Upload   Total   Spent    Left  Speed
+#8 0.692   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   630  100   630    0     0   1950      0 --:--:-- --:--:-- --:--:--  1944
+#8 1.899   0 58.8M    0  573k    0     0   475k      0  0:02:06  0:00:01  0:02:05  475k  2 58.8M    2 1245k    0     0   562k      0  0:01:47  0:00:02  0:01:45  667k  2 58.8M    2 1661k    0     0   517k      0  0:01:56  0:00:03  0:01:53  542k  3 58.8M    3 2045k    0     0   486k      0  0:02:03  0:00:04  0:01:59  490k  4 58.8M    4 2413k    0     0   462k      0  0:02:10  0:00:05  0:02:05  459k  4 58.8M    4 2829k    0     0   455k      0  0:02:12  0:00:06  0:02:06  450k  5 58.8M    5 3133k    0     0   434k      0  0:02:18  0:00:07  0:02:11  378k  5 58.8M    5 3357k    0     0   408k      0  0:02:27  0:00:08  0:02:19  338k  6 58.8M    6 3709k    0     0   401k      0  0:02:30  0:00:09  0:02:21  330k  7 58.8M    7 4429k    0     0   434k      0  0:02:18  0:00:10  0:02:08  403k  8 58.8M    8 5197k    0     0   463k      0  0:02:09  0:00:11  0:01:58  474k 10 58.8M   10 6045k    0     0   494k      0  0:02:01  0:00:12  0:01:49  581k 12 58.8M   12 7597k    0     0   575k      0  0:01:44  0:00:13  0:01:31  849k 15 58.8M   15 9213k    0     0   648k      0  0:01:32  0:00:14  0:01:18 1108k 17 58.8M   17 10.5M    0     0   700k      0  0:01:26  0:00:15  0:01:11 1226k 20 58.8M   20 12.2M    0     0   770k      0  0:01:18  0:00:16  0:01:02 1459k 23 58.8M   23 13.8M    0     0   826k      0  0:01:12  0:00:17  0:00:55 1638k 25 58.8M   25 14.9M    0     0   841k      0  0:01:11  0:00:18  0:00:53 1544k 27 58.8M   27 16.2M    0     0   864k      0  0:01:09  0:00:19  0:00:50 1478k 28 58.8M   28 16.9M    0     0   858k      0  0:01:10  0:00:20  0:00:50 1361k 29 58.8M   29 17.5M    0     0   837k      0  0:01:12  0:00:21  0:00:51 1040k 33 58.8M   33 19.5M    0     0   898k      0  0:01:07  0:00:22  0:00:45 1139k 36 58.8M   36 21.6M    0     0   953k      0  0:01:03  0:00:23  0:00:40 1360k 39 58.8M   39 23.5M    0     0   994k      0  0:01:00  0:00:24  0:00:36 1495k 42 58.8M   42 24.8M    0     0  1010k      0  0:00:59  0:00:25  0:00:34 1625k 44 58.8M   44 26.1M    0     0  1020k      0  0:00:59  0:00:26  0:00:33 1851k 45 58.8M   45 27.0M    0     0  1019k      0  0:00:59  0:00:27  0:00:32 1570k 48 58.8M   48 28.4M    0     0  1032k      0  0:00:58  0:00:28  0:00:30 1397k 49 58.8M   49 29.3M    0     0  1028k      0  0:00:58  0:00:29  0:00:29 1192k 51 58.8M   51 30.5M    0     0  1034k      0  0:00:58  0:00:30  0:00:28 1158k 53 58.8M   53 31.7M    0     0  1041k      0  0:00:57  0:00:31  0:00:26 1151k 55 58.8M   55 32.6M    0     0  1037k      0  0:00:58  0:00:32  0:00:26 1137k 57 58.8M   57 33.9M    0     0  1045k      0  0:00:57  0:00:33  0:00:24 1120k 59 58.8M   59 34.8M    0     0  1042k      0  0:00:57  0:00:34  0:00:23 1124k 61 58.8M   61 36.1M    0     0  1052k      0  0:00:57  0:00:35  0:00:22 1158k 63 58.8M   63 37.5M    0     0  1060k      0  0:00:56  0:00:36  0:00:20 1179k 65 58.8M   65 38.2M    0     0  1053k      0  0:00:57  0:00:37  0:00:20 1159k 66 58.8M   66 38.8M    0     0  1042k      0  0:00:57  0:00:38  0:00:19 1020k 66 58.8M   66 39.2M    0     0  1026k      0  0:00:58  0:00:39  0:00:19  915k 67 58.8M   67 39.8M    0     0  1014k      0  0:00:59  0:00:40  0:00:19  748k 69 58.8M   69 40.6M    0     0  1009k      0  0:00:59  0:00:41  0:00:18  642k 70 58.8M   70 41.6M    0     0  1009k      0  0:00:59  0:00:42  0:00:17  678k 72 58.8M   72 42.4M    0     0  1006k      0  0:00:59  0:00:43  0:00:16  734k 74 58.8M   74 43.6M    0     0  1011k      0  0:00:59  0:00:44  0:00:15  899k 76 58.8M   76 45.0M    0     0  1020k      0  0:00:59  0:00:45  0:00:14 1068k 78 58.8M   78 46.3M    0     0  1027k      0  0:00:58  0:00:46  0:00:12 1169k 81 58.8M   81 47.9M    0     0  1039k      0  0:00:58  0:00:47  0:00:11 1289k 83 58.8M   83 49.3M    0     0  1048k      0  0:00:57  0:00:48  0:00:09 1410k 85 58.8M   85 50.2M    0     0  1044k      0  0:00:57  0:00:49  0:00:08 1336k 87 58.8M   87 51.3M    0     0  1047k      0  0:00:57  0:00:50  0:00:07 1287k 88 58.8M   88 52.2M    0     0  1044k      0  0:00:57  0:00:51  0:00:06 1203k 89 58.8M   89 52.8M    0     0  1035k      0  0:00:58  0:00:52  0:00:06 1004k 90 58.8M   90 53.5M    0     0  1030k      0  0:00:58  0:00:53  0:00:05  857k 92 58.8M   92 54.2M    0     0  1023k      0  0:00:58  0:00:54  0:00:04  816k 93 58.8M   93 55.1M    0     0  1022k      0  0:00:58  0:00:55  0:00:03  776k 95 58.8M   95 56.1M    0     0  1023k      0  0:00:58  0:00:56  0:00:02  812k 96 58.8M   96 57.0M    0     0  1021k      0  0:00:59  0:00:57  0:00:02  873k 97 58.8M   97 57.6M    0     0  1013k      0  0:00:59  0:00:58  0:00:01  832k100 58.8M  100 58.8M    0     0  1018k      0  0:00:59  0:00:59 --:--:--  964k
+#8 DONE 59.8s
+
+#9 [builder 5/9] RUN unzip kc.zip # unzips to kotlinc directory
+#9 sha256:62b29b5c422b7a02197a748ecdefda72ee8231b74e0f222548833cbefef95c8f
+#9 0.260 Archive:  kc.zip
+#9 0.260    creating: kotlinc/
+#9 0.260   inflating: kotlinc/build.txt       
+#9 0.260    creating: kotlinc/bin/
+#9 0.260   inflating: kotlinc/bin/kapt        
+#9 0.260   inflating: kotlinc/bin/kapt.bat    
+#9 0.260   inflating: kotlinc/bin/kotlin      
+#9 0.260   inflating: kotlinc/bin/kotlin-dce-js  
+#9 0.261   inflating: kotlinc/bin/kotlin-dce-js.bat  
+#9 0.261   inflating: kotlinc/bin/kotlin.bat  
+#9 0.261   inflating: kotlinc/bin/kotlinc     
+#9 0.261   inflating: kotlinc/bin/kotlinc-js  
+#9 0.261   inflating: kotlinc/bin/kotlinc-js.bat  
+#9 0.262   inflating: kotlinc/bin/kotlinc-jvm  
+#9 0.262   inflating: kotlinc/bin/kotlinc-jvm.bat  
+#9 0.262   inflating: kotlinc/bin/kotlinc.bat  
+#9 0.262    creating: kotlinc/lib/
+#9 0.263   inflating: kotlinc/lib/allopen-compiler-plugin.jar  
+#9 0.263   inflating: kotlinc/lib/android-extensions-compiler.jar  
+#9 0.267   inflating: kotlinc/lib/android-extensions-runtime.jar  
+#9 0.267   inflating: kotlinc/lib/annotations-13.0.jar  
+#9 0.267   inflating: kotlinc/lib/js.engines.jar  
+#9 0.267   inflating: kotlinc/lib/jvm-abi-gen.jar  
+#9 0.268   inflating: kotlinc/lib/kotlin-annotation-processing-cli.jar  
+#9 0.269   inflating: kotlinc/lib/kotlin-annotation-processing-runtime.jar  
+#9 0.269   inflating: kotlinc/lib/kotlin-annotation-processing.jar  
+#9 0.273   inflating: kotlinc/lib/kotlin-annotations-jvm-sources.jar  
+#9 0.273   inflating: kotlinc/lib/kotlin-annotations-jvm.jar  
+#9 0.273   inflating: kotlinc/lib/kotlin-ant.jar  
+#9 0.274   inflating: kotlinc/lib/kotlin-compiler.jar  
+#9 0.596   inflating: kotlinc/lib/kotlin-daemon-client.jar  
+#9 0.601   inflating: kotlinc/lib/kotlin-daemon.jar  
+#9 0.607   inflating: kotlinc/lib/kotlin-imports-dumper-compiler-plugin.jar  
+#9 0.609   inflating: kotlinc/lib/kotlin-main-kts.jar  
+#9 0.620   inflating: kotlinc/lib/kotlin-preloader.jar  
+#9 0.621   inflating: kotlinc/lib/kotlin-reflect-sources.jar  
+#9 0.626   inflating: kotlinc/lib/kotlin-reflect.jar  
+#9 0.647   inflating: kotlinc/lib/kotlin-runner.jar  
+#9 0.647   inflating: kotlinc/lib/kotlin-script-runtime-sources.jar  
+#9 0.647   inflating: kotlinc/lib/kotlin-script-runtime.jar  
+#9 0.648   inflating: kotlinc/lib/kotlin-scripting-common.jar  
+#9 0.649   inflating: kotlinc/lib/kotlin-scripting-compiler-impl.jar  
+#9 0.652   inflating: kotlinc/lib/kotlin-scripting-compiler.jar  
+#9 0.654   inflating: kotlinc/lib/kotlin-scripting-js.jar  
+#9 0.655   inflating: kotlinc/lib/kotlin-scripting-jvm.jar  
+#9 0.656   inflating: kotlinc/lib/kotlin-stdlib-jdk7-sources.jar  
+#9 0.656   inflating: kotlinc/lib/kotlin-stdlib-jdk7.jar  
+#9 0.656   inflating: kotlinc/lib/kotlin-stdlib-jdk8-sources.jar  
+#9 0.657   inflating: kotlinc/lib/kotlin-stdlib-jdk8.jar  
+#9 0.657   inflating: kotlinc/lib/kotlin-stdlib-js-sources.jar  
+#9 0.661   inflating: kotlinc/lib/kotlin-stdlib-js.jar  
+#9 0.687   inflating: kotlinc/lib/kotlin-stdlib-sources.jar  
+#9 0.691   inflating: kotlinc/lib/kotlin-stdlib.jar  
+#9 0.702   inflating: kotlinc/lib/kotlin-test-js-sources.jar  
+#9 0.702   inflating: kotlinc/lib/kotlin-test-js.jar  
+#9 0.703   inflating: kotlinc/lib/kotlin-test-junit-sources.jar  
+#9 0.703   inflating: kotlinc/lib/kotlin-test-junit.jar  
+#9 0.703   inflating: kotlinc/lib/kotlin-test-junit5-sources.jar  
+#9 0.704   inflating: kotlinc/lib/kotlin-test-junit5.jar  
+#9 0.704   inflating: kotlinc/lib/kotlin-test-sources.jar  
+#9 0.704   inflating: kotlinc/lib/kotlin-test-testng-sources.jar  
+#9 0.704   inflating: kotlinc/lib/kotlin-test-testng.jar  
+#9 0.704   inflating: kotlinc/lib/kotlin-test.jar  
+#9 0.706   inflating: kotlinc/lib/kotlinx-coroutines-core.jar  
+#9 0.720   inflating: kotlinc/lib/kotlinx-serialization-compiler-plugin.jar  
+#9 0.724   inflating: kotlinc/lib/mutability-annotations-compat.jar  
+#9 0.724   inflating: kotlinc/lib/noarg-compiler-plugin.jar  
+#9 0.725   inflating: kotlinc/lib/parcelize-compiler.jar  
+#9 0.727   inflating: kotlinc/lib/parcelize-runtime.jar  
+#9 0.728   inflating: kotlinc/lib/sam-with-receiver-compiler-plugin.jar  
+#9 0.728   inflating: kotlinc/lib/trove4j.jar  
+#9 0.737    creating: kotlinc/license/
+#9 0.737   inflating: kotlinc/license/COPYRIGHT.txt  
+#9 0.737   inflating: kotlinc/license/COPYRIGHT_HEADER.txt  
+#9 0.737   inflating: kotlinc/license/LICENSE.txt  
+#9 0.737   inflating: kotlinc/license/NOTICE.txt  
+#9 0.738   inflating: kotlinc/license/README.md  
+#9 0.738    creating: kotlinc/license/third_party/
+#9 0.738   inflating: kotlinc/license/third_party/aosp_license.txt  
+#9 0.738   inflating: kotlinc/license/third_party/args4j_LICENSE.txt  
+#9 0.739   inflating: kotlinc/license/third_party/asm_license.txt  
+#9 0.739   inflating: kotlinc/license/third_party/asmble_license.txt  
+#9 0.739   inflating: kotlinc/license/third_party/boost_LICENSE.txt  
+#9 0.739   inflating: kotlinc/license/third_party/closure-compiler_LICENSE.txt  
+#9 0.739   inflating: kotlinc/license/third_party/dart_LICENSE.txt  
+#9 0.740   inflating: kotlinc/license/third_party/fastutil_licence  
+#9 0.740   inflating: kotlinc/license/third_party/gradle_license.txt  
+#9 0.740   inflating: kotlinc/license/third_party/guava_license.txt  
+#9 0.741   inflating: kotlinc/license/third_party/gwt_license.txt  
+#9 0.741   inflating: kotlinc/license/third_party/jquery_license.txt  
+#9 0.741   inflating: kotlinc/license/third_party/jshashtable_license.txt  
+#9 0.741   inflating: kotlinc/license/third_party/karma-teamcity-reporter_LICENSE.txt  
+#9 0.741   inflating: kotlinc/license/third_party/karma_LICENSE.txt  
+#9 0.741   inflating: kotlinc/license/third_party/lodash_LICENSE.txt  
+#9 0.742   inflating: kotlinc/license/third_party/maven_LICENSE.txt  
+#9 0.742   inflating: kotlinc/license/third_party/mocha-teamcity-reporter_LICENSE.txt  
+#9 0.742   inflating: kotlinc/license/third_party/pcollections_LICENSE.txt  
+#9 0.742   inflating: kotlinc/license/third_party/prototype_license.txt  
+#9 0.742   inflating: kotlinc/license/third_party/qunit_license.txt  
+#9 0.743   inflating: kotlinc/license/third_party/rhino_LICENSE.txt  
+#9 0.743   inflating: kotlinc/license/third_party/scala_license.txt  
+#9 0.743   inflating: kotlinc/license/third_party/teamcity-service-messages_LICENSE.txt  
+#9 0.743   inflating: kotlinc/license/third_party/trove_license.txt  
+#9 0.744   inflating: kotlinc/license/third_party/trove_readme_license.txt  
+#9 0.744    creating: kotlinc/license/third_party/testdata/
+#9 0.744   inflating: kotlinc/license/third_party/testdata/dagger_license.txt  
+#9 0.744   inflating: kotlinc/license/third_party/testdata/eclipse_distribution_license.txt  
+#9 0.744   inflating: kotlinc/license/third_party/testdata/eclipse_license.txt  
+#9 0.745   inflating: kotlinc/license/third_party/testdata/findbugs_license.txt  
+#9 0.745   inflating: kotlinc/license/third_party/testdata/lombok_license.txt  
+#9 0.745   inflating: kotlinc/license/third_party/testdata/rxjava_license.txt  
+#9 0.745   inflating: kotlinc/license/third_party/testdata/spring_license.txt  
+#9 DONE 0.8s
+
+#10 [builder 6/9] RUN kotlinc -version
+#10 sha256:9afb7da1ff51393b6da95f07b15ceda14a3677c7cddbd37d4eb060071d3eaa40
+#10 1.729 info: kotlinc-jvm 1.5.10 (JRE 1.8.0_292-b10)
+#10 DONE 2.4s
 
 #11 [builder 7/9] WORKDIR /app
-#11 sha256:9012b98942159a4e415d51b1d04d6bae3529578159f96c6a296d8f07ddfa164b
-#11 CACHED
+#11 sha256:bf282162be5ee9bc9b7c7dd9aea01d33b76ec9b315cbbb00852829d1af7633a5
+#11 DONE 0.0s
 
 #13 [builder 8/9] COPY . .
-#13 sha256:b531df40485e37b85db64632e7d2b5466a4771e727b27beb1b8cb13f9f6a3d5f
+#13 sha256:a2299963f21bd1e7b64c57d06428bf4bdc20241e42e289a4406c69bb5aa7a3aa
 #13 DONE 0.0s
 
 #14 [builder 9/9] RUN kotlinc -d app.jar -include-runtime *.kt
-#14 sha256:42a13837afdbda0d16598387a53802c3ac7d3cd0d89bc8cea52c88ac5ed513dd
-#14 9.735 SquareRoot.kt:84:9: warning: expected performance impact from inlining is insignificant. Inlining works best for functions with parameters of functional types
-#14 9.735 private inline fun error(s: Double, x: Double) = (s - x*x)/(2*x)
-#14 9.735         ^
-#14 9.735 SquareRoot.kt:86:9: warning: expected performance impact from inlining is insignificant. Inlining works best for functions with parameters of functional types
-#14 9.735 private inline fun improve(x: Double, e: Double) = x + e
-#14 9.735         ^
-#14 DONE 9.8s
-
-#5 [stage-1 2/3] WORKDIR /app
-#5 sha256:b28002b25e3bd5eb53cbcc85bb70a4b601b8a3a287bfafdd6efb43548b864244
-#5 CACHED
+#14 sha256:671682c1f887b99c41ad7b2bcfc41135a4fe9f982604878d8f391c4bc0134867
+#14 5.834 SquareRoot.kt:84:9: warning: expected performance impact from inlining is insignificant. Inlining works best for functions with parameters of functional types
+#14 5.834 private inline fun error(s: Double, x: Double) = (s - x*x)/(2*x)
+#14 5.834         ^
+#14 5.834 SquareRoot.kt:86:9: warning: expected performance impact from inlining is insignificant. Inlining works best for functions with parameters of functional types
+#14 5.834 private inline fun improve(x: Double, e: Double) = x + e
+#14 5.834         ^
+#14 DONE 5.9s
 
 #15 [stage-1 3/3] COPY --from=builder /app/app.jar .
-#15 sha256:6f4448bbccc7031d27591f5785348a1e97da7762b2087fd201d50852d25c0880
+#15 sha256:745871be45015c81c307d365b7bd8c7153d2e54f4e6f41d974a4ee15569bd6a8
 #15 DONE 0.0s
 
 #16 exporting to image
 #16 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
 #16 exporting layers 0.0s done
-#16 writing image sha256:78397dbf94dd6d3c5599f5a554cbc2e01fbea31aaa0c83dcc9967212d65cbc88 done
+#16 writing image sha256:d77ef03bd3fa5dfe28542b7fb52a0b5ba77fdb89dcb6c8cab3dbc04ecd3cbf0c done
 #16 naming to docker.io/library/square-root-kotlin done
-#16 DONE 0.1s
+#16 DONE 0.0s
 
 Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
